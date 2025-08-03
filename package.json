@@ -1,0 +1,20 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test-command",
+    "client-build": "npm "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincentmaresca/website.git"
+  },
+  "author": "Vincent Maresca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincentmaresca/website/issues"
+  },
+  "homepage": "https://github.com/vincentmaresca/website#readme"
+}

@@ -1,0 +1,2 @@
+Shift + Alt + A = multiline comment
+Ctrl + Alt + P = Commit + Push

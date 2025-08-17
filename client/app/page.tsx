@@ -16,10 +16,10 @@ export default async function Home(): Promise<unknown> {
 				<Link href="/">Home</Link>
 			</li>
 			<li>
-				<Link href="/pages/test">Test</Link>
+				<Link href="/test/test2">Test 2</Link>
 			</li>
 			<li>
-				<Link href="/blog/hello-world">Blog Post</Link>
+				<Link href="/test">Test</Link>
 			</li>
 		</ul>
 	);

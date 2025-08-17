@@ -1,7 +1,6 @@
-import { Linden_Hill } from "next/font/google";
 import Link from "next/link";
 
-export default function Test() {
+export default function Home() {
 	return (
 		<div>
 			Testing Page

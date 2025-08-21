@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.card {
+	color: aqua;
+	margin-top: 500px;
+	margin: -9px;
+}
+
+@theme .cardTheme {
+	
+}

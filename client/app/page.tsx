@@ -1,3 +1,4 @@
+import { CardComponent } from "@/components/card-component";
 import Link from "next/link";
 import { Children, FC, PropsWithChildren, ReactNode } from "react";
 
@@ -12,39 +13,34 @@ export default async function Home(): Promise<unknown> {
 	</div> */}
 
 	return (
-		<div className="mx-auto flex max-w-md items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
-			<ul>
-				<li>
-					<Link href="/">Home</Link>
-				</li>
-				<li>
-					<Link href="/test/test2">Test 2</Link>
-				</li>
-				<li>
-					<Link href="/test">Test</Link>
-				</li>
-			</ul>
-			<br></br>
-			{"\n"}
-			<CardComponent field1="Test Field one :)">
-				<div className="bg-red-500">
-					Testing Children
+		<div>
+			<div className="flex justify-center">
+				<div className="ml-4">
+					<CardComponent field1="Card Component" header="Test Header">
+						<ul>
+							<li>
+								<Link href="/">Home</Link>
+							</li>
+							<li>
+								<Link href="/test/test2">Test 2</Link>
+							</li>
+							<li>
+								<Link href="/test">Test</Link>
+							</li>
+						</ul>
+					</CardComponent>
 				</div>
-			</CardComponent>
+				<div className="ml-4">
+					<CardComponent field1="Card Component 2" header="Test Header 2">
+						Content 2
+					</CardComponent>
+				</div>
+				<div className="ml-4">
+					<CardComponent field1="Card Component 3" header="Test Header 3">
+						Content 3
+					</CardComponent>
+				</div>
+			</div>
 		</div>
 	);
 }
-
-type Props = PropsWithChildren<{
-	field1: string;
-	children: ReactNode;
-}>
-
-const CardComponent: React.FC<Props> = (props) => {
-	return (
-		<div>
-			<p>{props.field1}</p>
-			{props.children}
-		</div>
-	);
-};

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CardComponent } from "@/components/card-component";
+import Link from "next/link";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -23,16 +24,26 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-		<div className="flex justify-self-start">
-			<CardComponent field1="Sidebar Field">
-				So this is how you would have a sidebar?
-			</CardComponent>
-		</div>
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+			<div className="flex justify-self-start">
+				<CardComponent field1="Sidebar">
+					<ul>
+						<li>
+							<Link href="/">Home</Link>
+						</li>
+						<li>
+							<Link href="/test">Test</Link>
+						</li>
+						<li>
+							<Link href="/test/test2">Test 2</Link>
+						</li>
+					</ul>
+				</CardComponent>
+			</div>
+			{children}
+			</body>
+		</html>
+	);
 }
